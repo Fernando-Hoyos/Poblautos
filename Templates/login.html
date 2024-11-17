@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Styles/login.css" />
+    <title>Login</title>
+  </head>
+
+  <body>
+    <div class="login">
+      <div class="login-screen">
+        <div class="app-title">
+          <h1>Iniciar Sesión</h1>
+          <img
+            class="image"
+            src="/Imag/cerrar-con-llave.png"
+            alt="Inicio de Sesión"
+          />
+        </div>
+
+        <div class="login-form">
+          <div class="control-group">
+            <input
+              type="text"
+              class="login-field"
+              value=""
+              placeholder="Usuario"
+              id="login-name"
+            />
+            <label class="login-field-icon fui-user" for="login-name"></label>
+          </div>
+
+          <div class="control-group">
+            <input
+              type="password"
+              class="login-field"
+              value=""
+              placeholder="Contraseña"
+              id="login-pass"
+            />
+            <label class="login-field-icon fui-lock" for="login-pass"></label>
+          </div>
+
+          <a class="btn btn-dark btn-large btn-block" href="#">Login</a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

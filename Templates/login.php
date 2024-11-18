@@ -1,3 +1,7 @@
+<?php
+  //Solicitar la conexion de la BD 
+  include 'includes/conecta.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>

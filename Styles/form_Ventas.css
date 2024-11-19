@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form_p {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.form_p h2 {
+  font-size: 25px;
+  color: black;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container > input {
+  padding: 17px 15px 17px 65px;
+  width: 100%;
+  margin-bottom: 25px;
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+  background-color: transparent;
+  border: 2px solid #1a2c1e;
+  font-size: 16px;
+  outline: none;
+  color: #050a11;
+}
+
+::placeholder {
+  color: #1a2c1e;
+  font-size: 16px;
+}
+
+.btn {
+  background: #1a2c1e;
+  padding: 15px 80px;
+  border: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.success {
+  position: fixed; /* Se fija en la pantalla */
+  top: 20px; /* Espaciado desde la parte superior */
+  right: 20px; /* Espaciado desde el borde derecho */
+  background-color: #00a735; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  font-size: 16px; /* Tamaño del texto */
+  padding: 15px 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateY(-20px); /* Desplazado hacia arriba */
+  animation: fadeInOut 4s ease forwards; /* Animación suave */
+  z-index: 1000; /* Para que esté por encima de otros elementos */
+}
+
+.error {
+  position: fixed; /* Se fija en la pantalla */
+  top: 20px; /* Espaciado desde la parte superior */
+  right: 20px; /* Espaciado desde el borde derecho */
+  background-color: #e02d00; /* Color de fondo para error */
+  color: #fff; /* Color del texto */
+  font-size: 16px; /* Tamaño del texto */
+  padding: 15px 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateY(-20px); /* Desplazado hacia arriba */
+  animation: fadeInOut 4s ease forwards; /* Animación suave */
+  z-index: 1000; /* Para que esté por encima de otros elementos */
+}
+
+/* Animación para que aparezca y desaparezca */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    padding: 30px;
+  }
+
+  .form_p {
+    width: 340px;
+  }
+}

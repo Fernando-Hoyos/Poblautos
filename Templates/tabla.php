@@ -4,71 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Styles/tablas.css">
+    <link rel="stylesheet" href="../Styles/tabla.css">
     <title>Tabla</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        }
-
-        table {
-            width: 80%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        th,
-        td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #ddd;
-        }
-
-        .button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .button:hover {
-            background-color: #45a049;
-        }
-
-        .container {
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
     <div class="container">
+        <!-- Botón para volver -->
+        <a href="/poblautos/templates/index_login.php?p=list_tabla" class="button">Volver a la página principal</a>
         <?php
         include '../Includes/conecta.php';  // Asegúrate de que el archivo de conexión está incluido
 
@@ -131,9 +74,6 @@
             }
         }
         ?>
-
-        <!-- Botón para volver -->
-        <a href="/poblautos/templates/index_login.php?p=list_tabla" class="button">Volver a la Página Anterior</a>
     </div>
 </body>
 

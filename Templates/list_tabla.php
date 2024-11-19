@@ -27,7 +27,7 @@ if (empty($tables)) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../Styles/tablas.css">
+  <link rel="stylesheet" href="../Styles/list_tabla.css">
   <title>Tabla</title>
 </head>
 
@@ -44,50 +44,8 @@ if (empty($tables)) {
       }
       ?>
     </select>
-    <input type="submit" value="Ver Tabla">
+    <input type="submit" value="Ver Tabla" class="btn">
   </form>
-
-  <?php
-  //var_dump($_GET); // Esto te ayudará a ver qué parámetros están llegando en la URL.
-  /*
-  if (isset($_GET['table'])) {
-    $table = $_GET['table'];
-
-    // Obtener los datos de la tabla seleccionada
-    $query = "SELECT * FROM `$table`";
-    $result = $conecta->query($query);
-
-    if (!$result) {
-      die("Error al ejecutar la consulta: " . $conecta->error);
-    }
-
-    // Verificar si la consulta devuelve datos
-    if ($result->num_rows > 0) {
-      // Mostrar la tabla de resultados
-      echo "<table border='1'>";
-      echo "<thead><tr>";
-
-      // Obtener los nombres de las columnas
-      $fields = $result->fetch_fields();
-      foreach ($fields as $field) {
-        echo "<th>{$field->name}</th>";
-      }
-      echo "</tr></thead><tbody>";
-
-      // Filas con los datos
-      while ($row = $result->fetch_assoc()) {
-        echo "<tr>";
-        foreach ($row as $value) {
-          echo "<td>$value</td>";
-        }
-        echo "</tr>";
-      }
-      echo "</tbody></table>";
-    } else {
-      echo "No hay datos en esta tabla.";
-    }
-  }*/
-  ?>
 
 </body>
 

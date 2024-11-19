@@ -5,21 +5,22 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #e4e4e4;
+  font-family: "Arial", "Helvetica", sans-serif;
+  background-color: #f0f0f5;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: right;
+  justify-content: center; /* Cambiado a 'center' para centrar mejor los elementos */
   min-height: 100vh;
   text-align: center;
+  padding: 20px; /* Añadido para evitar que los elementos toquen los bordes */
 }
 
 form {
   margin-top: 80px;
   background-color: #f5f5f5;
-  padding: 40px;
-  width: 420px;
+  padding: 30px 40px; /* Ajustado para un espacio más uniforme */
+  width: 400px;
   text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }

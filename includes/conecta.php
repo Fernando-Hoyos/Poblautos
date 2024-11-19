@@ -6,7 +6,7 @@ $usuario = "root";
 $password = "";
 $bd = "basededatos";
 $conecta = new mysqli($servidor, $usuario, $password, $bd);
-if($conecta->connect_error){
-    die("Error al conectar la base de datos de la pagina".$conecta->connect_error);
+
+if ($conecta->connect_error) {
+    die("Error al conectar la base de datos de la pagina" . $conecta->connect_error);
 }
-?>

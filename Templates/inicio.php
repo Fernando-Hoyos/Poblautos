@@ -18,7 +18,7 @@
             <ul>
                 <li class="<?php echo $pagina == 'inicio' ? 'active' : ''; ?>"><a href="?p=inicio">Inicio</a></li>
                 <li class="<?php echo $pagina == 'form_Ventas' ? 'active' : ''; ?>"><a href="?p=form_Ventas">Registro de Ventas</a></li>
-                <li><a href="#">Listado de Datos</a></li>
+                <li class="<?php echo $pagina == 'list_tabla' ? 'active' : ''; ?>"><a href="?p=list_tabla">Listado de Datos</a></li>
                 <li><a href="#">Tablero</a></li>
                 <li><a href="../Templates/index.php">Cerrar Sesión</a></li>
             </ul>

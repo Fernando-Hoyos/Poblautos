@@ -50,3 +50,45 @@
   font-family: Arial, Helvetica, sans-serif;
   opacity: 0.7;
 }
+/* Reglas de medios */
+@media screen and (max-width: 900px) {
+  .sidebar {
+    width: 240px; /* Reduce el ancho del sidebar */
+  }
+
+  .sidebar img {
+    width: 100px; /* Reduce el tamaño de la imagen */
+  }
+
+  .side-hide {
+    font-size: 20px; /* Ajusta el tamaño del texto del botón */
+  }
+
+  .sidebar ul li a {
+    font-size: 15px; /* Ajusta el tamaño del texto de los enlaces */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sidebar {
+    width: 100%; /* Sidebar ocupa todo el ancho */
+    height: auto; /* Ajusta la altura */
+    position: relative; /* Cambia la posición */
+  }
+
+  .sidebar img {
+    width: 80px; /* Imagen aún más pequeña */
+  }
+
+  .side-hide {
+    display: none; /* Oculta el botón de cerrar en pantallas pequeñas */
+  }
+
+  .sidebar ul li {
+    padding: 10px 5px; /* Reduce el relleno */
+  }
+
+  .sidebar ul li a {
+    font-size: 14px; /* Texto más pequeño */
+  }
+}

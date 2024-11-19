@@ -1,17 +1,21 @@
+<?php
+  //Solicitar la conexion de la BD 
+  include '../Includes/conecta.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/Styles/index.css" />
-    <link rel="shortcut icon" href="/Imag/Logo-P.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/POBLAUTOS/Styles/index.css" />
+    <link rel="shortcut icon" href="../Imag/Logo-P.png" type="image/x-icon" />
     <title>PoblAutos</title>
   </head>
   <body>
     <header>
       <nav>
         <a href="#">Inicio</a>
-        <a href="/Templates/login.php">Ingresar</a>
+        <a href="../Templates/login.php">Ingresar</a>
       </nav>
       <section class="texto-header">
         <h1>Lujo y exclusividad en cada detalle</h1>
@@ -34,7 +38,7 @@
       <section class="contenedor sobre-nosotros">
         <h2 class="titulo">Nuestros productos</h2>
         <div class="contenedor-sobre-nosotros">
-          <img src="/Imag/Imag2.jpg" alt="" class="imagen-about-us" />
+          <img src="../Imag/Imag2.jpg" alt="" class="imagen-about-us" />
           <div class="contenido-textos">
             <h3><span>1</span>Los mejores productos</h3>
             <p>
@@ -64,58 +68,58 @@
           <h2 class="titulo">Portafolio</h2>
           <div class="galeria-port">
             <div class="imagen-port">
-              <img src="/Imag/Imag3.jpg" alt="" />
+              <img src="../Imag/Imag3.jpg" alt="" />
               <div class="hover-galeria">
-                <img src="/Imag/ojo.png" alt="" />
+                <img src="../Imag/ojo.png" alt="" />
                 <p>Ver</p>
               </div>
             </div>
             <div class="imagen-port">
-              <img src="/Imag/Imag4.jpg" alt="" />
+              <img src="../Imag/Imag4.jpg" alt="" />
               <div class="hover-galeria">
-                <img src="/Imag/ojo.png" alt="" />
+                <img src="../Imag/ojo.png" alt="" />
                 <p>Ver</p>
               </div>
             </div>
             <div class="imagen-port">
-              <img src="/Imag/Imag5.jpg" alt="" />
+              <img src="../Imag/Imag5.jpg" alt="" />
               <div class="hover-galeria">
-                <img src="/Imag/ojo.png" alt="" />
+                <img src="../Imag/ojo.png" alt="" />
                 <p>Ver</p>
               </div>
             </div>
             <div class="imagen-port">
-              <img src="/Imag/Imag6.jpg" alt="" />
+              <img src="../Imag/Imag6.jpg" alt="" />
               <div class="hover-galeria">
-                <img src="/Imag/ojo.png" alt="" />
+                <img src="../Imag/ojo.png" alt="" />
                 <p>Ver</p>
               </div>
             </div>
             <div class="imagen-port">
-              <img src="/Imag/Imag7.jpg" alt="" />
+              <img src="../Imag/Imag7.jpg" alt="" />
               <div class="hover-galeria">
-                <img src="/Imag/ojo.png" alt="" />
+                <img src="../Imag/ojo.png" alt="" />
                 <p>Ver</p>
               </div>
             </div>
             <div class="imagen-port">
-              <img src="/Imag/Imag8.jpg" alt="" />
+              <img src="../Imag/Imag8.jpg" alt="" />
               <div class="hover-galeria">
-                <img src="/Imag/ojo.png" alt="" />
+                <img src="../Imag/ojo.png" alt="" />
                 <p>Ver</p>
               </div>
             </div>
             <div class="imagen-port">
-              <img src="/Imag/Imag9.jpg" alt="" />
+              <img src="../Imag/Imag9.jpg" alt="" />
               <div class="hover-galeria">
-                <img src="/Imag/ojo.png" alt="" />
+                <img src="../Imag/ojo.png" alt="" />
                 <p>Ver</p>
               </div>
             </div>
             <div class="imagen-port">
-              <img src="/Imag/Imag10.jpg" alt="" />
+              <img src="../Imag/Imag10.jpg" alt="" />
               <div class="hover-galeria">
-                <img src="/Imag/ojo.png" alt="" />
+                <img src="../Imag/ojo.png" alt="" />
                 <p>Ver</p>
               </div>
             </div>
@@ -126,7 +130,7 @@
         <h2 class="titulo">Comentarios</h2>
         <div class="cards">
           <div class="card">
-            <img src="/Imag/selfie.jpg" alt="" />
+            <img src="../Imag/selfie.jpg" alt="" />
             <div class="contenido-texto-card">
               <h4>Name</h4>
               <p>
@@ -138,7 +142,7 @@
             </div>
           </div>
           <div class="card">
-            <img src="/Imag/selfie2.jpg" alt="" />
+            <img src="../Imag/selfie2.jpg" alt="" />
             <div class="contenido-texto-card">
               <h4>Name</h4>
               <p>
@@ -156,7 +160,7 @@
           <h2 class="titulo">Nuestros servicios</h2>
           <div class="servicio-cont">
             <div class="servicio-ind">
-              <img src="/Imag/asesoria.jpg" alt="" />
+              <img src="../Imag/asesoria.jpg" alt="" />
               <h3>Asesoría</h3>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -164,7 +168,7 @@
               </p>
             </div>
             <div class="servicio-ind">
-              <img src="/Imag/mecanico.jpg" alt="" />
+              <img src="../Imag/mecanico.jpg" alt="" />
               <h3>Servicio Técnico</h3>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -172,7 +176,7 @@
               </p>
             </div>
             <div class="servicio-ind">
-              <img src="/Imag/compra.jpg" alt="" />
+              <img src="../Imag/compra.jpg" alt="" />
               <h3>Servicio de Calidad</h3>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.

@@ -14,7 +14,7 @@ include '../Includes/send.php';
 </head>
 
 <body>
-  <form class="form_p" method="post" autocomplete="off">
+  <form method="post" autocomplete="off">
     <h2>Registro de Ventas</h2>
     <div class="input-group">
       <div class="input-container">

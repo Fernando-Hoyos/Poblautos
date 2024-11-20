@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../Styles/tablero.css">
+</head>
+
+<body>
+    <canvas id="ventasChart"></canvas>
+    <script>
+        // Datos generados por PHP
+        const labels = <?php echo $mesesJSON; ?>;
+        const data = <?php echo $valoresJSON; ?>;
+
+        // Configuración del gráfico
+        const config = {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Autos vendidos por mes',
+                    data: data,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // Renderizar el gráfico
+        const ventasChart = new Chart(
+            document.getElementById('ventasChart'),
+            config
+        );
+    </script>
+    <canvas id="chartVentasPorMarca"></canvas>
+    <script>
+        const marcas = <?php echo $marcasJSON; ?>;
+        const ventasPorMarca = <?php echo $ventasPorMarcaJSON; ?>;
+
+        new Chart(document.getElementById('chartVentasPorMarca'), {
+            type: 'bar',
+            data: {
+                labels: marcas,
+                datasets: [{
+                    label: 'Ventas por Marca',
+                    data: ventasPorMarca,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+    <canvas id="chartIngresosPorMes"></canvas>
+    <script>
+        const meses = <?php echo $mesesJSON; ?>;
+        const ingresosPorMes = <?php echo $ingresosPorMesJSON; ?>;
+
+        new Chart(document.getElementById('chartIngresosPorMes'), {
+            type: 'line',
+            data: {
+                labels: meses,
+                datasets: [{
+                    label: 'Ingresos por Mes',
+                    data: ingresosPorMes,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <canvas id="chartMejoresClientes"></canvas>
+    <script>
+        const clientes = <?php echo $clientesJSON; ?>;
+        const totalCompras = <?php echo $totalComprasJSON; ?>;
+
+        new Chart(document.getElementById('chartMejoresClientes'), {
+            type: 'bar',
+            data: {
+                labels: clientes,
+                datasets: [{
+                    label: 'Mejores Clientes',
+                    data: totalCompras,
+                    backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                    borderColor: 'rgba(255, 206, 86, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <canvas id="chartVentasDiarias"></canvas>
+    <script>
+        const dias = <?php echo $diasJSON; ?>;
+        const ventasDiarias = <?php echo $ventasDiariasJSON; ?>;
+
+        new Chart(document.getElementById('chartVentasDiarias'), {
+            type: 'line',
+            data: {
+                labels: dias,
+                datasets: [{
+                    label: 'Ventas Diarias',
+                    data: ventasDiarias,
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+    <div style="padding: 20px; background-color: #4caf50; color: white; text-align: center; font-size: 20px; border-radius: 10px;">
+        <h2>Total de Ingresos Generados</h2>
+        <p>$<?php echo number_format($totalIngresos, 2); ?></p>
+    </div>
+
+    <canvas id="chartAutosVendidosPorMarca" width="400" height="400"></canvas>
+
+    <script>
+        // Pasamos las variables desde PHP a JavaScript
+        const marcas = <?php echo $marcasJSON; ?>; // Ejemplo: ["Toyota", "Honda", "Nissan"]
+        const vendidos = <?php echo $totalVendidosJSON; ?>; // Ejemplo: [10, 15, 8]
+
+        // Configuración del gráfico
+        new Chart(document.getElementById('chartAutosVendidosPorMarca'), {
+            type: 'pie', // Cambiar a 'pie' para gráfica circular
+            data: {
+                labels: marcas, // Nombres de las marcas
+                datasets: [{
+                    label: 'Autos Vendidos',
+                    data: vendidos, // Cantidad de autos vendidos por marca
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(153, 102, 255, 0.6)',
+                        'rgba(255, 159, 64, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true, // Aseguramos que el gráfico sea adaptable
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    }
+                }
+            }
+        });
+    </script>
+
+
+    <div style="padding: 20px; background-color: #2196f3; color: white; text-align: center; font-size: 20px; border-radius: 10px;">
+        <h2>Sucursal con Más Ventas</h2>
+        <p><?php echo $sucursalMayorVentas; ?> (<?php echo $totalVentas; ?> ventas)</p>
+    </div>
+
+    <canvas id="chartPromedioPrecioAutos"></canvas>
+
+    <script>
+        const marcasPromedio = <?php echo $marcasPromedioJSON; ?>;
+        const promedioPrecios = <?php echo $promedioPreciosJSON; ?>;
+
+        new Chart(document.getElementById('chartPromedioPrecioAutos'), {
+            type: 'doughnut',
+            data: {
+                labels: marcasPromedio, // Marcas de autos
+                datasets: [{
+                    label: 'Promedio Precio de Autos ($)',
+                    data: promedioPrecios, // Promedios de precios
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

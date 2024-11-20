@@ -8,6 +8,7 @@
     <link
         rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="shortcut icon" href="../Imag/Logo-P.png" type="image/x-icon" />
     <title>PoblAutos</title>
 </head>
 
